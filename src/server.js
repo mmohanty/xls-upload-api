@@ -3,8 +3,12 @@ const multer = require('multer');
 const xlsx = require('xlsx');
 const path = require('path');
 
+var cors = require('cors')
+
 const app = express();
 const port = 3500;
+
+app.use(cors());
 
 // Set up Multer to store uploaded files in a 'uploads' directory
 const storage = multer.diskStorage({
